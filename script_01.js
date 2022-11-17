@@ -66,27 +66,42 @@
 /********************************************************/
     // Modul 1: Objekt erstellen
     let cmpMob = {
-        firstName: getDBfn(),
+        firstName: [ "Alfred", "Heinz", "Maria" ],
         lastName: getDBln(),
         userAge: getDBage(),
         userSal: getDBsal(),
         userSex: getDBsex(),
-        getGreet: function() {
-            return "Hallo, ich bin " + getSex() + " " + this.firstName[ 0 ] + " " + this.lastName[ 0 ];
+        getGreet: function( i ) {
+            return "Hallo, " + getSex( this.userSex[ i ] ) + " " + this.firstName[ i ] + " " + this.lastName[ i ];
+        },
+        getAge: function( i ) {
+            return "ist " + setAge( this.userAge[ i ] ) + " Jahre alt";
+        },
+        getSalary: function( i ) {
+            return "und verdient " + this.userSal[ i ] + " im Monat";
+        },
+        getOutput: function( i ) {
+            return this.getGreet( i ) + " " + this.getAge( i ) + " " + this.getSalary( i );
         }
-
     }
 
     // output test
-    output( cmpMob.getGreet() );
+    // output( cmpMob.getOutput( 1 ) );
+    // cmpMobStart();
+    function cmpMobStart() {
+        for (let i = 0; i < getDBfn().length; i++) {
+            output( cmpMob.getOutput( i ) );
+        }
+    }
 
     // Modul 1: Funktionen erstellen, könnten auch aus externen DAtenbanken oder Arrays DAten sein
     function getDBfn() { return [ "Alfred", "Heinz", "Maria" ] }
     function getDBln() { return [ "Mayer", "Hermann", "Walter" ] }
-    function getDBage() { return [ 45, 56, 38 ] }
+    function getDBage() { return [ 1953, 1985, 1975 ] }
     function getDBsal() { return [ 50000, 40000, 65000 ] }
     function getDBsex() { return [ 0, 0, 1 ] }
-    function getSex() { return ( this.userSex === 1 ) ? "Frau" : "Herr"; }
+    function getSex( us ) { return ( us === 1 ) ? "Frau" : "Herr"; }
+    function setAge( dob ){ return new Date().getFullYear() - dob; }
 /********************************************************/
 /*******                  Output                  *******/
 /********************************************************/
