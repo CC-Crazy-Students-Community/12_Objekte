@@ -1,4 +1,3 @@
-
 /***** Erinnerung: Arrays *******/
 
 // default arrays
@@ -37,7 +36,7 @@
                 return "Hallo ich bin " + this.firstName + " " + this.lastName;
             }
         }
-        // Modul 1: Ausgabe Test
+    // Modul 1: Ausgabe Test
         // output( person );
         // output( person.firstName );
         // output( person.lastName );
@@ -85,9 +84,7 @@
         }
     }
 
-    // output test
-    // output( cmpMob.getOutput( 1 ) );
-    // cmpMobStart();
+    cmpMobStart();
     function cmpMobStart() {
         for (let i = 0; i < getDBfn().length; i++) {
             output( cmpMob.getOutput( i ) );
@@ -102,6 +99,28 @@
     function getDBsex() { return [ 0, 0, 1 ] }
     function getSex( us ) { return ( us === 1 ) ? "Frau" : "Herr"; }
     function setAge( dob ){ return new Date().getFullYear() - dob; }
+
+    // output test data variables
+        // output( cmpMob.firstName[ 1 ] );
+        // output( cmpMob.userAge[ 1 ] );
+        // output( cmpMob.userSal[ 1 ] );
+        // output( ( cmpMob.userSex[ 1 ] === 1 ) ? "Frau" : "Herr" );
+
+    // output test functions
+        // output( cmpMob.getGreet( 1 ) );
+        // output( cmpMob.getAge( 1 ) );
+        // output( cmpMob.getSalary( 1 ) );
+        // output( cmpMob.getOutput( 1 ) );
+
+    // output test
+        // output( getDBfn() );
+        // output( getDBln() );
+        // output( getDBage() );
+        // output( getDBsal() );
+        // output( getDBsex() );
+        // output( getSex( 1 ) );
+        // output( setAge( 1985 ) );
+
 /********************************************************/
 /*******                  Output                  *******/
 /********************************************************/
