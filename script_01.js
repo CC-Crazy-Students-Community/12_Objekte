@@ -28,27 +28,37 @@
     
 /*******   Objekte 1 Daten/Funktionen   *******/
     // Modul 1: Objekt erstellen
-    let person = {
-        firstName: "Max",
-        lastName: "Mustermann",
-        sallary: [ 120000, 160000 ],
-        permission: false,
-        sayHello: function() {
-            return "Hallo ich bin " + this.firstName + " " + this.lastName;
+        let person = {
+            firstName: "Max",
+            lastName: "Mustermann",
+            sallary: [ 120000, 160000 ],
+            permission: false,
+            sayHello: function() {
+                return "Hallo ich bin " + this.firstName + " " + this.lastName;
+            }
         }
-    }
-    // Modul 1: Ausgabe Test
-    // output( person );
-    // output( person.firstName );
-    // output( person.lastName );
-    // output( person.sallary );
+        // Modul 1: Ausgabe Test
+        // output( person );
+        // output( person.firstName );
+        // output( person.lastName );
+        // output( person.sallary );
 
     // Modul 2: Objekt verschachteln und verknüpfen
-    const testText = "Ich bin " + person.firstName + " " + person.lastName + " und verdiene " + person.sallary[ 1 ].toLocaleString('de-DE') + " € im Jahr.";
-    output( testText );
-    output( person.sayHello() );
-    
-    
+        const testText = "Ich bin " + person.firstName + " " + person.lastName + " und verdiene " + person.sallary[ 1 ].toLocaleString('de-DE') + " € im Jahr.";
+        // output( testText );
+        // output( person.sayHello() );
+
+/*******   Objekte 2 - Hierarchie   *******/
+    // Der Baikalsee
+    const baikal = {
+        value: "10m",
+        deep: {
+            deeper: {
+                deepest: "Das Licht - auf 1642 m!"
+            }
+        }
+    }
+    output( baikal.deep.deeper.deepest );
     
 /********************************************************/
 /*******                  Output                  *******/
