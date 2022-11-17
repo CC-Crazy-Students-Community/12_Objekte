@@ -46,7 +46,7 @@
     // Modul 2: Objekt verschachteln und verknüpfen
     const testText = "Ich bin " + person.firstName + " " + person.lastName + " und verdiene " + person.sallary[ 1 ].toLocaleString('de-DE') + " € im Jahr.";
     output( testText );
-    output( person.sayHello );
+    output( person.sayHello() );
     
     
     
