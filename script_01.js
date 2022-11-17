@@ -58,8 +58,35 @@
             }
         }
     }
-    output( baikal.deep.deeper.deepest );
-    
+    // output( baikal.deep.deeper.deepest );
+    // output( baikal.deepest );
+
+/********************************************************/
+/*******                Example 01                *******/
+/********************************************************/
+    // Modul 1: Objekt erstellen
+    let cmpMob = {
+        firstName: getDBfn(),
+        lastName: getDBln(),
+        userAge: getDBage(),
+        userSal: getDBsal(),
+        userSex: getDBsex(),
+        getGreet: function() {
+            return "Hallo, ich bin " + getSex() + " " + this.firstName[ 0 ] + " " + this.lastName[ 0 ];
+        }
+
+    }
+
+    // output test
+    output( cmpMob.getGreet() );
+
+    // Modul 1: Funktionen erstellen, könnten auch aus externen DAtenbanken oder Arrays DAten sein
+    function getDBfn() { return [ "Alfred", "Heinz", "Maria" ] }
+    function getDBln() { return [ "Mayer", "Hermann", "Walter" ] }
+    function getDBage() { return [ 45, 56, 38 ] }
+    function getDBsal() { return [ 50000, 40000, 65000 ] }
+    function getDBsex() { return [ 0, 0, 1 ] }
+    function getSex() { return ( this.userSex === 1 ) ? "Frau" : "Herr"; }
 /********************************************************/
 /*******                  Output                  *******/
 /********************************************************/
