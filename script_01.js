@@ -32,10 +32,10 @@
         firstName: "Max",
         lastName: "Mustermann",
         sallary: [ 120000, 160000 ],
-        doorPermission: false,
-        sayHello: function() { 
-            return "Hallo ich bin " + this.firstName + " " + this.lastName ;
-         }
+        permission: false,
+        sayHello: function() {
+            return "Hallo ich bin " + this.firstName + " " + this.lastName;
+        }
     }
     // Modul 1: Ausgabe Test
     // output( person );
