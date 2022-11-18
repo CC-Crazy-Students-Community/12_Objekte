@@ -65,12 +65,12 @@
 /********************************************************/
     // Modul 1: Objekt erstellen
     let cmpMob = {
-        firstName: [ "Alfred", "Heinz", "Maria" ],
-        lastName: getDBln(),
+        firstName: [ "Alfred", "Heinz", "Maria" ],      // variable mit Aray manuel gefüllt
+        lastName: getDBln(),                            // variable kann per Funktion gefüllt werden, wie zb eine Datenbankausgabe per Funktionsabruf
         userAge: getDBage(),
         userSal: getDBsal(),
         userSex: getDBsex(),
-        getGreet: function( i ) {
+        getGreet: function( i ) {                       // eingebaute Funktionen im Objekt, welche auch noch Funktionen
             return "Hallo, " + getSex( this.userSex[ i ] ) + " " + this.firstName[ i ] + " " + this.lastName[ i ];
         },
         getAge: function( i ) {
@@ -84,9 +84,9 @@
         }
     }
 
-    cmpMobStart();
+    cmpMobStart();                                          // startet das Modul
     function cmpMobStart() {
-        for (let i = 0; i < getDBfn().length; i++) {
+        for (let i = 0; i < getDBfn().length; i++) {        // damit jeder im Array stehen Eintrag genutz wird, muss das in einer Schleife starten
             output( cmpMob.getOutput( i ) );
         }
     }
